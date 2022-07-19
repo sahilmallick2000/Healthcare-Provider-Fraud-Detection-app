@@ -33,9 +33,6 @@ score_feat_xgb = xgb.get_booster().feature_names
 # In[3]:
 
 
-#Keeping the raw features
-#raw_features=pd.read_csv("C:\\Users\\Sahil\\Desktop\\Summer\\Project\\RAW_Features.csv")
-#raw_feat=list(raw_features['Raw Features'])
 
 
 predictor=['Provider', 'InscClaimAmtReimbursed_merged_sum','InscClaimAmtReimbursed_merged_max','InscClaimAmtReimbursed_merged_std',
@@ -66,7 +63,7 @@ def scoring(val_score):
     
     # now to apply woebins on validation sample
     # Read the dev_woe_validation dataframe
-    dev_woe_validation=pd.read_csv("C:\\Users\\Sahil\\Desktop\\Summer\\Project\\dev_woe_validation.csv")
+    dev_woe_validation=pd.read_csv("https://raw.githubusercontent.com/sahilmallick2000/Healthcare-Provider-Fraud-Detection-app/main/dev_woe_validation.csv")
     val_score_woe = sc.woebin_ply(val_score[predictor], dev_woe_validation)
     
     woe_feat_val = [i for i in val_score_woe.columns if i.endswith('_woe') or i in (['Provider']) ]
