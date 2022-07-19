@@ -24,7 +24,7 @@ import numpy as np
 #with open('xgb_pkl_1' , 'rb') as f:
 #     xgb = pickle.load(f)
 
-pickle_in=open("C:\\Users\\Sahil\\Fraud_project\\fraud_detection_xgb.pkl","rb")
+pickle_in=open("fraud_detection_xgb.pkl","rb")
 xgb=pickle.load(pickle_in)
 # Getting Model Features
 score_feat_xgb = xgb.get_booster().feature_names
