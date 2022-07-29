@@ -12,6 +12,7 @@ import pandas as pd
 import pickle
 import streamlit as st
 import scorecardpy as sc
+import numpy as np
 
 
 # In[2]:
