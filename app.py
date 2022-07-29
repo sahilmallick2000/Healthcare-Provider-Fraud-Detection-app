@@ -102,7 +102,7 @@ def main():
         
     #result=""
 
-    if st.button("Predict default by XGBoost"):
+    if st.button("Predict Fraud by XGBoost"):
         result=predict_default(input_data)
         if result==0:
            st.success('The Provider is non-fradulent')
