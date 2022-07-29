@@ -11,10 +11,7 @@ Created on Tue Jul 19 16:38:02 2022
 import pandas as pd
 import pickle
 import streamlit as st
-from PIL import Image
 import scorecardpy as sc
-import math 
-import numpy as np
 
 
 # In[2]:
